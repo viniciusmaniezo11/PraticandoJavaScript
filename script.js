@@ -1,9 +1,9 @@
 //let nome = "Diogo"
 //let idade = 30
 
-// -----------------------------------
-// ------- CONCATENAÇÃO --------------
-// -----------------------------------
+//! -----------------------------------
+//! ------- CONCATENAÇÃO --------------
+//! -----------------------------------
 
 //console.log("Nome: " + nome,", Idade: " + idade);
 
@@ -22,9 +22,9 @@
 //console.log(typeof soma)
 //console.log(typeof sub)
 
-// -----------------------------------
-// ------- CONVERTENDO VALORES -------
-// -----------------------------------
+//! -----------------------------------
+//! ------- CONVERTENDO VALORES -------
+//! -----------------------------------
 
 //let numero = "53" //* String
 
@@ -32,9 +32,9 @@
 
 //console.log(typeof convertido)
 
-// -----------------------------------
-// ----- OPERADORES RELACIONAIS ------
-// -----------------------------------
+//! -----------------------------------
+//! ----- OPERADORES RELACIONAIS ------
+//! -----------------------------------
 
 //* ==: Valida igual de valor (Somente valor)
 // "10" == 10 -> true
@@ -46,9 +46,9 @@
 //* ||: Siginifica OR.
 //* !: Significa negação.
 
-// -----------------------------------
-// ----- ESTRUTURA DE REPETIÇÃO ------
-// -----------------------------------
+//! -----------------------------------
+//! ----- ESTRUTURA DE REPETIÇÃO ------
+//! -----------------------------------
 
 //let frutas = ["Maçã", "Banana", "Acerola", "Uva"];
 
@@ -62,9 +62,9 @@
 //* forEach resumido
 //frutas.forEach(fruta => console.log(`Fruta: ${fruta}`));
 
-// -----------------------------------
-// ----- FUNÇÕES NATIVAS DO JS -------
-// -----------------------------------
+//! -----------------------------------
+//! ----- FUNÇÕES NATIVAS DO JS -------
+//! -----------------------------------
 
 //? --- FUNÇÃO MAP() ---
 //* Percorre uma lista e cria uma nova lista com base em uma condição.
@@ -105,12 +105,88 @@
 //? --- FUNÇÃO FIND() ---
 //* Retorna o primeiro elemento que atende a condição
 
-let produtos = [
-    {id: 1, nome: "Teclado", preço: 50}, //Produto
-    {id: 2, nome: "Mouse", preço: 30}, 
-    {id: 3, nome: "Cadeira", preço: 20}, 
-    {id: 4, nome: "Headset", preço: 10}
-]
+// let produtos = [
+//     {id: 1, nome: "Teclado", preço: 50}, //Produto
+//     {id: 2, nome: "Mouse", preço: 30}, 
+//     {id: 2, nome: "Caderno", preço: 35}, 
+//     {id: 3, nome: "Cadeira", preço: 20}, 
+//     {id: 4, nome: "Headset", preço: 10}
+// ]
 
-let item = produtos.find(produto => produto.id === 2);
-console.log(item)
+// let item = produtos.find(produto => produto.id === 2);
+// console.log(item)
+
+//* Diferença entre filter() e find()
+//* find() retorna somente o primeiro elemento que ele encontra com a condição já filter() retorna todos elementos que encontra com a condição
+// let itemFiltrado = produtos.filter(produto => produto.id === 2)
+
+// console.log(itemFiltrado);
+
+//? --- FUNÇÃO SPLIT() ---
+//* Divide a string em partes, transfromando em um array
+
+// let frase = "JS é top"
+
+// let palavras = frase.split("")
+
+// console.log(palavras);
+
+//? --- FUNÇÃO TRIM() ---
+//* Remove espaços no final e final de uma string
+
+// let nome = "         Paulo              "
+// let nomeLimpo = nome.trim()
+
+// console.log(nome);
+// console.log(nomeLimpo);
+
+//? --- FUNÇÃO INCLUDES() ---
+//* Indica se existe um valor dentro de uma lista e retorna booleano (true ou false)
+
+// let frutas = ["Maçã", "Banana"];
+
+// let frutasIncludes = frutas.includes("Maçã")
+
+// console.log(frutasIncludes);
+
+//? --- FUNÇÃO TOLOWERCASE() E TOUPPERCASE() ---
+//* toLowerCase() transforma o texto em minusculo e toUpperCase() transforma o texto em maiusculo
+
+// let nome = "VINICIUS"
+// let cargo = "estudante"
+
+// console.log(nome.toLowerCase());
+// console.log(cargo.toUpperCase());
+
+//? --- FUNÇÃO SOME() ---
+//* Verifica se pelo menos um item atende a condição e retorna um valor booleano (true ou false)
+
+// let numeros = [1, 3, 5, 8];
+
+// let temPar = numeros.some(num => num % 2 === 0)
+
+// console.log(temPar);
+
+//? --- FUNÇÃO EVERY() ---
+//* Verifica se todos itens atendem a condição e retorna um valor booleano (true ou false)
+
+// let numeros = [1, 3, 5, 8]
+
+// let todosPares = numeros.every(num => num % 2 === 0)
+
+// console.log(todosPares);
+
+//? --- FUNÇÃO SORT() ---
+//* Ordena os elementos do array
+
+let numeros = [3, 10, 5, 2, 4]
+let letras = ["c", "a", "x", "h"]
+
+//* Para letras
+letras.sort();
+console.log(letras);
+
+//* Para números
+numeros.sort((a, b) => a - b)
+console.log(numeros);
+

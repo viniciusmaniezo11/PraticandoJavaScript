@@ -21,7 +21,7 @@ btnMaioridade.addEventListener("click", function () {
 
 const btnNegativo = document.getElementById("checarNegativo")
 
-btnNegativo.addEventListener("click", function() {
+btnNegativo.addEventListener("click", function () {
     const numero = document.getElementById("negativo").value
 
     if (numero > 0) {
@@ -36,7 +36,7 @@ btnNegativo.addEventListener("click", function() {
 
 const btnNota = document.getElementById("checarNota")
 
-btnNota.addEventListener("click", function() {
+btnNota.addEventListener("click", function () {
     const nota = document.getElementById("nota").value
 
     if (nota >= 60) {
@@ -48,4 +48,20 @@ btnNota.addEventListener("click", function() {
 })
 
 //* 4. Verificar se um número é positivo, negativo ou zero
+
+const btnZero = document.getElementById("checarZero")
+
+btnZero.addEventListener("click", function () {
+    const zero = document.getElementById("zero").value
+
+    if (zero > 0) {
+        alert("Número positivo")
+    }
+    else if (zero < 0) {
+        alert("Número negativo")
+    }
+    else {
+        alert("Número é zero")
+    }
+})
 
