@@ -65,3 +65,23 @@ btnZero.addEventListener("click", function () {
     }
 })
 
+//* 5. Checagem de idade
+
+const btnIdade = document.getElementById("checarIdade")
+
+btnIdade.addEventListener("click", function () {
+    const idade = document.getElementById("idade").value
+
+    if (idade >= 0 && idade <= 12) {
+        alert("Você é uma criança")
+    }
+    else if (idade >= 13 && idade <= 17) {
+        alert("Você é um adolescente")
+    }
+    else if (idade >= 18) {
+        alert("Você é um adulto")
+    }
+    else {
+        alert("Idade invalida")
+    }
+})
